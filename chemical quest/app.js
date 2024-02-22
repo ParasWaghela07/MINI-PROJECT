@@ -138,10 +138,23 @@ const elements=[
     { key: "In pipes and cables, I'm quite strong, In every structure, I belong. With a polymer structure, I'm made, In every use, I don't fade. What am I?", value: "PVC" },
     { key: "In fuels and solvents, I'm the star, With a sweet smell, I'm known from afar. With a hexagonal structure, I'm shown, In every compound, I'm known. What am I?", value: "Benzene" }
 ];
+ 
+const formcControlCheckbox = document.querySelectorAll('.cbox');
+
+formcControlCheckbox.forEach(onebyone => {
+    onebyone.addEventListener('click', function() {
+        formcControlCheckbox.forEach(otherCheckbox => {
+            if (onebyone !== otherCheckbox) {
+                otherCheckbox.checked = false;
+            }
+        });
+        onebyone.checked = true;
+    });
+});
 
 
 let to_enter;
-let allinputs=document.querySelectorAll("input[type='radio']");
+let allinputs=document.querySelectorAll("input[type='checkbox']");
 let correct=0;
 let incorrect=0;
 let times=0;
@@ -204,7 +217,7 @@ function reset(){
 }
 
 function finishQuiz(){
-    document.getElementById('inbox').innerText="correct=" + correct + "incorret = "+incorrect;
+    document.getElementById('inbox').innerText="correct=" + correct +" "+ "incorrect = "+incorrect;
 }
 
 

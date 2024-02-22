@@ -5,20 +5,48 @@
 }
 
 .main{
-    width: 100%;
+
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url("Untitled\ design-1.png");
+    background-repeat:initial;
+    background-size: cover;
+    width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.734);
     display: flex;
+    /* background-position: center; */
+    /* background-attachment: fixed; */
+    background-position: 50% 50%;
     justify-content: center;
     align-items: center;
 }
 
+.main-image{
+
+    width: 100vw;
+    height: 100vh;
+}
+
+
 .box{
+    
     width: 40%;
     height: 60%;
-    background-color: aliceblue;
+    background-color: #51cfbe;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    border-radius: 5%;
+}
+.option1{
+    font-size: 17px;
+    font-weight: bold;
+}
+.sbutton{
+    height: 2vw;
+    width:5vw;
+    background-color: #f36868;
+    border-radius: 6%;
+    border: none;
 }

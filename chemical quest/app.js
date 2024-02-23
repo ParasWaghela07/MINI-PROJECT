@@ -159,28 +159,65 @@ let correct=0;
 let incorrect=0;
 let times=0;
 
+function checkRepeat(s) {
+    if (s === allinputs[0].nextElementSibling.innerText ||
+        s === allinputs[1].nextElementSibling.innerText ||
+        s === allinputs[2].nextElementSibling.innerText ||
+        s === allinputs[3].nextElementSibling.innerText) {
+        return true;
+    }
+
+    return false; 
+}
 
 function load(){
     reset();
     times++;
     console.log(times);
+    if(times==5){
+        document.getElementById('submitbtn').innerText="SUBMIT";
+    }
     if(times==6){
         return finishQuiz();
     }
     console.log("correct=" + correct,"incorret = "+incorrect);
     let random=Math.floor(Math.random()*elements.length)
     to_enter=elements[random];
+    elements.splice(random, 1);
+
     document.getElementById("qstbox").innerText=`${times}) ${to_enter.key}`;
 
+    for(let i=0;i<=3;i++){
+        while(1){
+            // console.log("in temp")
+            let random=elements[Math.floor(Math.random() * elements.length)].value;
+            if(checkRepeat(random)===false){
+                allinputs[i].nextElementSibling.innerText=random;
+                // console.log("Heyaa")
+                break;
+            }
+        }
+    }
+    // allinputs[0].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
+    // allinputs[1].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
+    // allinputs[2].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
+    // allinputs[3].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
 
-    allinputs[0].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
-    allinputs[1].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
-    allinputs[2].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
-    allinputs[3].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
+    let flag=0;
+    for(let i=0;i<=3;i++){
+        if(to_enter.value===allinputs[i].nextElementSibling.innerText){
+            allinputs[i].nextElementSibling.innerText=to_enter.value;
+            flag++;
+            break;
+        }
+    }
 
+    if(flag==0){
     let ansIndex=Math.floor(Math.random()*allinputs.length);
     allinputs[ansIndex].nextElementSibling.innerText=to_enter.value;
+    }
 }
+
 
 document.getElementById("submitbtn").addEventListener('click',function(){
     let ans=getAnswer();
@@ -217,9 +254,10 @@ function reset(){
 }
 
 function finishQuiz(){
-    document.getElementById('inbox').innerText="correct=" + correct +" "+ "incorrect = "+incorrect;
+    localStorage.setItem('correct_ans',correct)
+    localStorage.setItem('incorrect_ans',incorrect)
+    window.location.href = "result.html";
 }
-
 
 
 

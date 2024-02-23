@@ -4,6 +4,7 @@ let a2=localStorage.getItem('incorrect_ans')
 console.log(a1,a2);
 
 document.getElementById('crt').innerText=a1;
+<<<<<<< HEAD
 document.getElementById('incrt').innerText=a2;
 
 let counter=1;
@@ -23,3 +24,6 @@ while(counter<=5){
 console.log(q);
 console.log(u);
 console.log(c);
+=======
+document.getElementById('incrt').innerText=a2;
+>>>>>>> f8c6ac07fa2ffd94c178e51412f26af35852cc9e

@@ -138,41 +138,104 @@ const elements=[
     { key: "In pipes and cables, I'm quite strong, In every structure, I belong. With a polymer structure, I'm made, In every use, I don't fade. What am I?", value: "PVC" },
     { key: "In fuels and solvents, I'm the star, With a sweet smell, I'm known from afar. With a hexagonal structure, I'm shown, In every compound, I'm known. What am I?", value: "Benzene" }
 ];
+ 
+const formcControlCheckbox = document.querySelectorAll('.cbox');
+
+formcControlCheckbox.forEach(onebyone => {
+    onebyone.addEventListener('click', function() {
+        formcControlCheckbox.forEach(otherCheckbox => {
+            if (onebyone !== otherCheckbox) {
+                otherCheckbox.checked = false;
+            }
+        });
+        onebyone.checked = true;
+    });
+});
 
 
 let to_enter;
-let allinputs=document.querySelectorAll("input[type='radio']");
+let allinputs=document.querySelectorAll("input[type='checkbox']");
 let correct=0;
 let incorrect=0;
 let times=0;
+let qstno=1;
+let userAns=1;
+let crtAns=1;
 
+function checkRepeat(s) {
+    if (s === allinputs[0].nextElementSibling.innerText ||
+        s === allinputs[1].nextElementSibling.innerText ||
+        s === allinputs[2].nextElementSibling.innerText ||
+        s === allinputs[3].nextElementSibling.innerText) {
+        return true;
+    }
+
+    return false; 
+}
 
 function load(){
     reset();
     times++;
     console.log(times);
+    if(times==5){
+        document.getElementById('submitbtn').innerText="SUBMIT";
+    }
     if(times==6){
         return finishQuiz();
     }
     console.log("correct=" + correct,"incorret = "+incorrect);
     let random=Math.floor(Math.random()*elements.length)
     to_enter=elements[random];
+    elements.splice(random, 1);
+
+    localStorage.setItem('qst'+qstno,to_enter.key);
+    console.log(to_enter.key);
+    qstno++;
+
     document.getElementById("qstbox").innerText=`${times}) ${to_enter.key}`;
 
+    for(let i=0;i<=3;i++){
+        while(1){
+            // console.log("in temp")
+            let random=elements[Math.floor(Math.random() * elements.length)].value;
+            if(checkRepeat(random)===false){
+                allinputs[i].nextElementSibling.innerText=random;
+                // console.log("Heyaa")
+                break;
+            }
+        }
+    }
+    // allinputs[0].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
+    // allinputs[1].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
+    // allinputs[2].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
+    // allinputs[3].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
 
-    allinputs[0].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
-    allinputs[1].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
-    allinputs[2].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
-    allinputs[3].nextElementSibling.innerText=elements[Math.floor(Math.random() * elements.length)].value;
+    let flag=0;
+    for(let i=0;i<=3;i++){
+        if(to_enter.value===allinputs[i].nextElementSibling.innerText){
+            allinputs[i].nextElementSibling.innerText=to_enter.value;
+            flag++;
+            break;
+        }
+    }
 
+    if(flag==0){
     let ansIndex=Math.floor(Math.random()*allinputs.length);
     allinputs[ansIndex].nextElementSibling.innerText=to_enter.value;
+    }
 }
+
 
 document.getElementById("submitbtn").addEventListener('click',function(){
     let ans=getAnswer();
     let correctAns = to_enter.value;
     console.log("ANS:",correctAns,"USER ANS :",ans);
+
+    localStorage.setItem('ua'+userAns,ans);
+    userAns++;
+    localStorage.setItem('ca'+crtAns,correctAns);
+    crtAns++;
+
     if(ans == correctAns){
         correct++;
     }
@@ -204,9 +267,7 @@ function reset(){
 }
 
 function finishQuiz(){
-    document.getElementById('inbox').innerText="correct=" + correct + "incorret = "+incorrect;
+    localStorage.setItem('correct_ans',correct)
+    localStorage.setItem('incorrect_ans',incorrect)
+    window.location.href = "result.html";
 }
-
-
-
-

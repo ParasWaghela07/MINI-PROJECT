@@ -188,13 +188,10 @@ function load(){
     to_enter=elements[random];
     elements.splice(random, 1);
 
-<<<<<<< HEAD
     localStorage.setItem('qst'+qstno,to_enter.key);
     console.log(to_enter.key);
     qstno++;
 
-=======
->>>>>>> f8c6ac07fa2ffd94c178e51412f26af35852cc9e
     document.getElementById("qstbox").innerText=`${times}) ${to_enter.key}`;
 
     for(let i=0;i<=3;i++){
@@ -273,11 +270,5 @@ function finishQuiz(){
     localStorage.setItem('correct_ans',correct)
     localStorage.setItem('incorrect_ans',incorrect)
     window.location.href = "result.html";
-<<<<<<< HEAD
+
 }
-=======
-}
-
-
-
->>>>>>> f8c6ac07fa2ffd94c178e51412f26af35852cc9e

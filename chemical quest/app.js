@@ -269,6 +269,6 @@ function reset(){
 function finishQuiz(){
     localStorage.setItem('correct_ans',correct)
     localStorage.setItem('incorrect_ans',incorrect)
-    window.location.href = "result.html";
+    window.location.href = "sampleresult.html";
 
 }

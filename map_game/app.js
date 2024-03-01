@@ -30,6 +30,7 @@ function load(){
         }
         console.log(q);
         console.log(userAns);
+        load();
     })
 
     load();

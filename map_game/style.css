@@ -13,10 +13,12 @@
 .mapBox{
     width:60%;
     height: 100%;
+    position: relative;
     border: 2px solid red;
-    background-image: url(mp.jpg);
+    background-image: url(mp4.webp);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 
 .qstBox{
@@ -30,24 +32,136 @@
 
 #maharashtra{
     position: absolute;
-    left: 17.5vw;
-    top: 60vh;
-    width: 20px;
-    height: 50px;
+    left: 20.5vw;
+    top: 59vh;
+    width: 2vw;
+    height: 2vh;
 }
 
 #guj{
     position: absolute;
-    left: 14.5vw;
-    top: 45vh;
-    width: 20px;
-    height: 50px;
+    left: 15.7vw;
+    top: 48vh;
+    width: 2vw;
+    height: 2vh;
 }
 
 #raj{
     position: absolute;
-    left: 17.5vw;
-    top: 34vh;
-    width: 20px;
-    height: 50px;
+    left: 19.5vw;
+    top: 37vh;
+    width: 2vw;
+    height: 2vh;
+}
+
+#mp{
+    position: absolute;
+    left: 23.5vw;
+    top: 47vh;
+    width: 2vw;
+    height: 2vh;
+}
+
+#ap{
+    position: absolute;
+    left: 25.5vw;
+    top: 67vh;
+    width: 2vw;
+    height: 2vh;
+}
+
+#kt{
+    position: absolute;
+    left: 21vw;
+    top: 72vh;
+    width: 2vw;
+    height: 2vh;
+}
+
+#tn{
+    position: absolute;
+    left: 24.4vw;
+    top: 82vh;
+    width: 2vw;
+    height: 2vh; 
+}
+
+#jk{
+    position: absolute;
+    left: 21.7vw;
+    top: 13vh;
+    width: 2vw;
+    height: 2vh;
+}
+
+#up{
+    position: absolute;
+    left: 27.9vw;
+    top: 37.8vh;
+    width: 2vw;
+    height: 2vh;
+}
+
+#or{
+    position: absolute;
+    left: 32.5vw;
+    top: 55.8vh;
+    width: 2vw;
+    height: 2vh;
+}
+
+#chg{
+    position: absolute;
+    left: 28.5vw;
+    top: 53.8vh;
+    width: 2vw;
+    height: 2vh;
+}
+
+#bi{
+    position: absolute;
+    left: 33.7vw;
+    top: 40vh;
+    width: 2vw;
+    height: 2vh;
+}
+
+#jrk{
+    position: absolute;
+    left: 33vw;
+    top: 46.5vh;
+    width: 2vw;
+    height: 2vh;
+}
+
+#wb{
+    position: absolute;
+    left: 36vw;
+    top: 46.5vh;
+    width: 2vw;
+    height: 2vh;
+}
+
+#pb{
+    position: absolute;
+    left: 21.5vw;
+    top: 25vh;
+    width: 2vw;
+    height: 2vh;
+}
+
+#hp{
+    position: absolute;
+    left: 39.3%;
+    top: 22%;
+    width: 2vw;
+    height: 2vh;
+}
+
+#utc{
+    position: absolute;
+    left: 26.3vw;
+    top: 28vh;
+    width: 2vw;
+    height: 2vh;
 }

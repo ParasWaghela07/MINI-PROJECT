@@ -1,5 +1,5 @@
 const states=[
-    'Maharashtra','gujarat','rajasthan'
+    'Maharashtra','gujarat','rajasthan','madhya-pradesh','andhra-pradesh','karnataka','tamil-nadu','jammu & kashmir','uttar-pradesh','orrisa','chhattisgarh','bihar','jharkhand','west-bengal','punjab','himanchal-pradesh','uttaranchal'
 ];
 let allinputs=document.querySelectorAll("input[type='radio']");
 let userAns;

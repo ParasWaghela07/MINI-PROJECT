@@ -7,7 +7,7 @@ document.getElementById('crt').innerText = a1;
 document.getElementById('incrt').innerText = a2;
 
 let counter = 1;
-while (counter <= 5) {
+while (counter <= 10) {
     let q = localStorage.getItem('qst' + counter);
     let u = localStorage.getItem('ua' + counter);
     let c = localStorage.getItem('ca' + counter);

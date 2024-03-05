@@ -118,10 +118,10 @@ function load(){
     reset();
     times++;
     console.log(times);
-    if(times==5){
+    if(times==10){
         document.getElementById('submitbtn').innerText="SUBMIT";
     }
-    if(times==6){
+    if(times==11){
         return finishQuiz();
     }
     console.log("correct=" + correct,"incorret = "+incorrect);

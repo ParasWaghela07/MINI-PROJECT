@@ -149,8 +149,13 @@ let score=0;
 let wrong=[];
 function finish(){
   console.log(wrong,wrong.length);
-  
-  let d="Game is finished ! \n You have guessed " + score + " Places correctly\n";
+
+  let d;
+  if(score<32)
+  d="Game is finished ! \n You have guessed " + score + " Places correctly\n";
+  else 
+  d="Game is finished ! \n Congratulations , You have guessed all the places correctly\n";
+
 
   if (wrong.length > 0) {
     
@@ -165,6 +170,7 @@ function finish(){
   
   document.getElementById('descLoc').innerText=d;
 }
+
 function load(){
   
     if(states.length==0 || lives==0){
@@ -194,8 +200,9 @@ function addDesc(){
             location.reload();
         })
         Array.from(p).forEach(element => {
+            
             element.addEventListener('click',function(){
-                
+              if(lives==0) return;
                 userAns=this.getAttribute('name');
                 console.log(this.getAttribute('name'))
 
@@ -240,15 +247,3 @@ function addDesc(){
 
 
     load();
-
-
-
-
-
-
-
-
-
-
-
-

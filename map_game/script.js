@@ -247,15 +247,3 @@ function addDesc(){
 
 
     load();
-
-
-
-
-
-
-
-
-
-
-
-

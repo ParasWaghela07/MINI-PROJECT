@@ -31,69 +31,87 @@ src: url(GeneralSans-Regular.otf);
 }
 .box1{
     width: 80vw;
-    height:15vh;
+    height:20vh;
+     padding: 10px;
     background-color: yellowgreen;
     margin-bottom:10px ;
 }
 
 .box2{
     width: 80vw;
-    height:15vh;
+    height:20vh;
+     padding: 10px;
     background-color: lightblue;
     margin-bottom:10px ;
 }
 
 .box3{
     width: 80vw;
-    height:15vh;
+    height:20vh;
+    padding: 10px;
     background-color: yellow;
     margin-bottom:10px ;
 }
 
 .box4{
     width: 80vw;
-    height:15vh;
+    height:20vh;
+     padding: 10px;
     background-color: lightcoral;
     margin-bottom:10px ;
 }
 
 .box5{
     width: 80vw;
-    height:15vh;
+    height:20vh;
+     padding: 10px;
     background-color: lightgreen;
     margin-bottom:10px ;
 }
 .box6{
     width: 80vw;
-    height:15vh;
+    height:20vh;
+     padding: 10px;
     background-color: yellowgreen;
     margin-bottom:10px ;
 }
 
 .box7{
     width: 80vw;
-    height:15vh;
+    height:20vh;
+     padding: 10px;
     background-color: lightblue;
     margin-bottom:10px ;
 }
 
 .box8{
     width: 80vw;
-    height:15vh;
+    height:20vh;
+     padding: 10px;
     background-color: yellow;
     margin-bottom:10px ;
 }
 
 .box9{
     width: 80vw;
-    height:15vh;
+    height:20vh;
+     padding: 10px;
     background-color: lightcoral;
     margin-bottom:10px ;
 }
 
 .box10{
     width: 80vw;
-    height:15vh;
+    height:20vh;
+    padding: 10px;
     background-color: lightgreen;
     margin-bottom:10px ;
+}
+#resultdis{
+    display: flex;
+    height: 17vh;
+    width: 100vw;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
 }

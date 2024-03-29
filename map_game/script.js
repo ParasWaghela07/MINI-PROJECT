@@ -138,7 +138,9 @@ const states=[
   'Telangana','Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chhattisgarh','Goa','Gujarat','Haryana','Himachal Pradesh','Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland','Odisha','Punjab','Rajasthan','Sikkim','Tamil Nadu','Tripura','Uttar Pradesh','Uttarakhand','West Bengal','Jammu and Kashmir','Ladakh','Delhi','Andaman and Nicobar'
   ];
 
-
+  document.getElementById('playAgain').addEventListener('click',function(){
+    location.reload();
+})
 
 // console.log("STATE KA SIZE=",states.length);
 let p = document.getElementsByTagName('path')
@@ -196,9 +198,7 @@ function addDesc(){
     document.getElementById('descLoc').innerText=data;
 }
 
-        document.getElementById('playAgain').addEventListener('click',function(){
-            location.reload();
-        })
+
         Array.from(p).forEach(element => {
             
             element.addEventListener('click',function(){
@@ -228,11 +228,6 @@ function addDesc(){
                     document.getElementById('descLoc').innerText="OOPS ! YOUR ALL LIVES ARE EXHAUSTED. \n YOU CAN TRY AGAIN !";
                 }
 
-                if(lives==0){
-                    document.getElementById('go').innerText="GAME OVER";
-                    finish();
-                    return;
-                }
 
                     
         

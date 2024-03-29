@@ -1,0 +1,150 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1e2128;
+    color: #fff;
+    height: 100vh;
+    overflow-x: hidden;
+   
+}
+.drop{
+    list-style: none;
+}
+.drop li{
+    display: none;
+}
+.drop :hover {
+    cursor: pointer;
+    display: block;
+}
+*{
+    font-family: "Poppins", sans-serif;
+
+}
+.animated-text{
+    font-size: 6rem;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.animated-text span{
+    position: relative;
+}
+
+.animated-text span::before{
+    content: "Math";
+    color: #ff7f50;
+    animation: words 20s infinite;
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #1e2128;
+    border-left: 2px solid #ff7f50;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #ff7f5000;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Math.";
+    }
+    21%,40%{
+        content: "Chemistry.";
+    }
+    41%,60%{
+        content: "Geography.";
+    }
+    61%,80%{
+        content: "Coding.";
+    }
+    81%,100%{
+        content: "Logic.";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+.hitems1 {
+    list-style: none;
+}
+.hitems2 {
+    list-style: none;
+    display: flex;
+    padding-right: 5%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; 
+    padding: 0.5% 0.5% 0% 0% ;
+    font-size: 2rem;
+    width: 100%;
+    
+}
+li {
+    padding: 1%;
+}
+.htem2{
+    /* padding-left: 1%; */
+    padding-right: 10%;
+}
+.mid{
+    display: flex;
+
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+}
+.left{
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid black; */
+    width: 50vw;
+}
+.right{
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid black; */
+    width: 50vw;
+
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.leftcontent{
+   padding-left: 4vw;
+   font-size: 8rem;
+}
+.rightcontent{
+   padding-left: 4vw;
+}
+.htem2 :hover{
+    cursor: pointer;
+     color: #ff7f50;  
+} 
+a{
+    text-decoration: none;
+    color: white;
+}

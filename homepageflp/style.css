@@ -120,12 +120,29 @@ li {
     width: 50vw;
 }
 .right{
-    height: 45vh;
+    /* height: 45vh; */
     display: flex;
     align-items: center;
-    /* border: 2px solid black; */
+    /* border: 2px solid white; */
     width: 50vw;
-
+    justify-content: space-around;
+}
+.right img{
+    transition: 0.5s;
+}
+.right img:hover{
+    transform: scale(1.1);
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px white;
+}
+/* .rightcon{
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+} */
+#gtxt{
+    text-align: center;
+    font-size: 1.5rem;
 }
 .footer{
     display: flex;

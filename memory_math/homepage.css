@@ -13,8 +13,8 @@
     padding: 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    /* font-family: 'Exo 2', sans-serif; */
-    font-family: "Poppins", sans-serif;
+    font-family: 'Exo 2', sans-serif;
+    /* font-family: "Poppins", sans-serif; */
     overflow-x: hidden;
     overflow-y: hidden;
 }

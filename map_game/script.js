@@ -22,7 +22,7 @@ const desc=
   },
   {
     "state": "Jammu and Kashmir",
-    "info": "Jammu and Kashmir, situated in northern India, is famed for its breathtaking Himalayan landscapes, rich cultural heritage, and spiritual significance. The state's summer capital, Srinagar, is renowned for its picturesque Dal Lake and Mughal gardens. Jammu and Kashmir is famous for religious sites like the Vaishno Devi Temple and the Amarnath Cave Shrine. Additionally, it's celebrated for its vibrant handicrafts, including Pashmina shawls and Kashmiri carpets, and its delectable cuisine, notably Wazwan."
+    "info": "Jammu and Kashmir, situated in northern India, is famed for its breathtaking Himalayan landscapes, rich cultural heritage, and spiritual significance. The state's summer capital, Srinagar, is renowned for its picturesque Dal Lake and Mughal gardens. Jammu and Kashmir is famous for religious sites like the Vaishno Devi Temple and the Amarnath Cave Shrine."
   },
   {
     "state": "Ladakh",
@@ -122,12 +122,12 @@ const desc=
   },
   {
     "state": "Andaman and Nicobar",
-    "info": "The Andaman and Nicobar Islands, situated in the Bay of Bengal, are renowned for their pristine beaches, lush tropical forests, and stunning coral reefs. The capital city, Port Blair, houses historic landmarks such as Cellular Jail, a reminder of India's struggle for independence. The islands boast a rich biodiversity, with rare species like the Andaman wild pig and the Nicobar megapode found in their natural habitats. Scuba diving and snorkeling are popular activities, allowing visitors to explore the vibrant marine life and colorful coral reefs. The islands are also known for their indigenous tribes, such as the Sentinelese and Jarawas, who have preserved their unique cultures amidst modernization. Andaman and Nicobar cuisine, influenced by coastal flavors, features delicacies like seafood curries, coconut-based dishes, and tropical fruits, offering a delightful culinary experience to visitors."
+    "info": "The Andaman and Nicobar Islands, in the Bay of Bengal, are famed for their pristine beaches, lush forests, and vibrant coral reefs. Port Blair, the capital, holds landmarks like Cellular Jail, a symbol of India's independence struggle. With rich biodiversity, rare species like Andaman wild pigs and Nicobar megapodes thrive. Scuba diving and snorkeling are popular for exploring marine life and coral reefs. The islands also host indigenous tribes like the Sentinelese and Jarawas, preserving their cultures amidst modernization."
     }
     ,
     {
       "state": "Delhi",
-      "info": "Delhi, the capital territory of India, is a bustling metropolis known for its rich history, vibrant culture, and diverse architecture. The city is home to iconic landmarks such as the Red Fort, Qutub Minar, and India Gate, which reflect its Mughal and colonial past. Delhi's street food scene is legendary, with specialties like chaat, parathas, and kebabs tantalizing taste buds in bustling markets such as Chandni Chowk and Connaught Place. The city's cultural diversity is showcased through its numerous festivals and events, including Diwali, Holi, and the International Kite Festival. Delhi's modern skyline is dotted with skyscrapers, shopping malls, and entertainment complexes, offering a blend of tradition and modernity. Additionally, the city is a hub for art, literature, and performing arts, with numerous galleries, theaters, and cultural centers contributing to its vibrant cultural scene."
+      "info": "Delhi, the capital territory of India, is a bustling metropolis known for its rich history, vibrant culture, and diverse architecture. The city is home to iconic landmarks such as the Red Fort, Qutub Minar, and India Gate, which reflect its Mughal and colonial past. Delhi's street food scene is legendary, with specialties like chaat, parathas, and kebabs tantalizing taste buds in bustling markets such as Chandni Chowk and Connaught Place. The city's cultural diversity is showcased through its numerous festivals and events, including Diwali, Holi, and the International Kite Festival."
       }
 ]
 console.log("size of desc==",desc.length);
@@ -153,15 +153,18 @@ function finish(){
   console.log(wrong,wrong.length);
 
   let d;
-  if(score<32)
+  
+  if(score==0)
+  d="Game is finished ! \n You haven't guessed any state correctly\n"
+  else if(score<32)
   d="Game is finished ! \n You have guessed " + score + " Places correctly\n";
-  else 
+  else
   d="Game is finished ! \n Congratulations , You have guessed all the places correctly\n";
 
 
   if (wrong.length > 0) {
     
-    d += "Your wrong guesses are: ";
+    d += "Your wrong guesses are --> ";
     wrong.forEach(e => {
         d += e + ", ";
     });

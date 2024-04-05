@@ -109,8 +109,8 @@ li {
 .mid{
     display: flex;
 
-    padding-top: 15vh;
-    padding-bottom: 15vh;
+    padding-top: 7.5vh;
+    padding-bottom: 7.5vh;
 }
 .left{
     height: 45vh;
@@ -128,7 +128,7 @@ li {
     justify-content: space-around;
 }
 .right img{
-    transition: 0.5s;
+    transition: 0.3s;
     width: 12rem;
     height: 12rem;
 }
@@ -166,4 +166,10 @@ li {
 a{
     text-decoration: none;
     color: white;
+}
+#hrt{
+    transition: 0.4s;
+}
+#hrt:hover{
+    transform: scale(1.5);
 }

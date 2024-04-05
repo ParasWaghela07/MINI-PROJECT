@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById("btn").addEventListener('click',function(){
 
     let userAns=document.getElementById("ansbox");
-
+    console.log(str)
     if(str==userAns.value){
         won.play();
         document.getElementById("num").innerText = str ;

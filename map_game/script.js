@@ -164,12 +164,14 @@ function finish(){
 
   if (wrong.length > 0) {
     
-    d += "Your wrong guesses are --> ";
+    d += "Your wrong guesses are : ";
     wrong.forEach(e => {
         d += e + ", ";
     });
+    
    
     d = d.slice(0, -2);
+    d+=".";
 }
 
   

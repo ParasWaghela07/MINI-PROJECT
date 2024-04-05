@@ -29,6 +29,21 @@ body {
     align-items: center;
     justify-content: center;
 }
+#crt {
+    background-color: #4CAF50;
+    padding: 8px;
+    border-radius: 4px;
+}
+#incrt{
+    background-color: #4CAF50;
+    padding: 8px;
+    border-radius: 4px;
+}
+#analysis{
+    background-color: #4CAF50;
+    padding: 8px;
+    border-radius: 4px;
+}
 
 .box1,
 .box2,
@@ -48,7 +63,12 @@ body {
     padding: 20px;
   
 }
-
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .answer {
     display: flex;
    

@@ -3,8 +3,18 @@ let a2 = localStorage.getItem('incorrect_ans');
 
 console.log(a1, a2);
 
-document.getElementById('crt').innerText = a1;
-document.getElementById('incrt').innerText = a2;
+document.getElementById('crt').innerText = "Correct answers = "+a1;
+document.getElementById('incrt').innerText = "Incorrect answers = "+a2;
+if(a1<=4){
+    document.getElementById('analysis').innerText = "Final conclusion : There is scope of improvement";
+}
+else if(a1<=7){
+    document.getElementById('analysis').innerText = "Final conclusion : You are doing good keep it up !";
+}
+
+else{
+    document.getElementById('analysis').innerText = "Final conclusion : Your performance is excellent";
+}
 
 let counter = 1;
 while (counter <= 10) {

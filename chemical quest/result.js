@@ -11,11 +11,9 @@ if(a1<=4){
 else if(a1<=7){
     document.getElementById('analysis').innerText = "Final conclusion : You are doing good keep it up !";
 }
-
 else{
     document.getElementById('analysis').innerText = "Final conclusion : Your performance is excellent";
 }
-
 let counter = 1;
 while (counter <= 10) {
     let q = localStorage.getItem('qst' + counter);

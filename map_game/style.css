@@ -6,15 +6,15 @@ body, html {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* SVG styling */
-svg {
+/* svg {
     width: 60vw;
     height: 100vh;
     overflow: hidden;
-}
+} */
 
 svg path {
     cursor: pointer;
@@ -38,7 +38,7 @@ svg path:hover {
     width: 55%;
     height: 100vh;
     /* border: 3px solid black; */
-    background-color: rgba(128, 128, 128, 0.178);
+    /* background-color: rgba(128, 128, 128, 0.178); */
 }
 
 /* Question box styling */

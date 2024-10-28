@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             
-        }, 2750);
+        }, 3125);
 
     }
     else if (selectedDifficulty === 'insane') {
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             
-        }, 2250);
+        }, 3250);
 
     }
 });

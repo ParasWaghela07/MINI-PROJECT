@@ -130,7 +130,7 @@ const desc=
       "info": "Delhi, the capital territory of India, is a bustling metropolis known for its rich history, vibrant culture, and diverse architecture. The city is home to iconic landmarks such as the Red Fort, Qutub Minar, and India Gate, which reflect its Mughal and colonial past. Delhi's street food scene is legendary, with specialties like chaat, parathas, and kebabs tantalizing taste buds in bustling markets such as Chandni Chowk and Connaught Place. The city's cultural diversity is showcased through its numerous festivals and events, including Diwali, Holi, and the International Kite Festival."
       }
 ]
-console.log("size of desc==",desc.length);
+
   
 
 // console.log("DESC KA SIZE=",desc.length);

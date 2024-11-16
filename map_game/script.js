@@ -150,8 +150,8 @@ let lives=3;
 let score=0;
 let wrong=[];
 function finish(){
-  console.log(wrong,wrong.length);
-
+  // console.log(wrong,wrong.length);
+  document.getElementById('popup').classList.remove('hidden');
   let d;
   
   if(score==0)

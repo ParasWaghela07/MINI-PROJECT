@@ -149,9 +149,39 @@ let q;
 let lives=3;
 let score=0;
 let wrong=[];
+let timer=0;
+
+function startInterval() {
+  intervalId = setInterval(() => {
+    timer++;
+
+    if(timer>=3600){
+      clearInterval(intervalId);
+      finish();
+    }
+  }, 1000); 
+}
+
+function stopInterval() {
+  if (intervalId) {
+    clearInterval(intervalId);
+  }
+}
+
 function finish(){
   // console.log(wrong,wrong.length);
   document.getElementById('popup').classList.remove('hidden');
+  document.getElementById('pop-score').innerText="Final Score : "+score;
+  stopInterval();
+
+  let mins=Math.floor(timer/60);
+  let secs=timer%60;
+
+  let s1="Minute",s2="Second";
+  if(mins>1)  s1+='s';
+  if(secs>1) s2+='s';
+  
+  document.getElementById("timer").innerText="Time taken : \n"+mins+' '+s1+' '+secs+' '+s2;
   let d;
   
   if(score==0)
@@ -214,6 +244,7 @@ function addDesc(){
                 if(q.toUpperCase()===userAns.toUpperCase()){
                     score++;
                     document.getElementById('score').innerText='Score : '+ score;
+                    console.log(score)
                     this.style.fill='lightgreen';
 
                     addDesc();
@@ -245,5 +276,14 @@ function addDesc(){
 
         });
 
+        document.getElementById('start').addEventListener('click',function(e){
+          document.getElementById('start').classList.add('hidden')
+          startgame();
+        })
 
-    load();
+        function startgame(){
+          load();
+          startInterval();
+        }
+
+    

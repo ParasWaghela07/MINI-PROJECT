@@ -135,7 +135,7 @@ const desc=
 
 // console.log("DESC KA SIZE=",desc.length);
 const states=[
-  'Telangana','Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chhattisgarh','Goa','Gujarat','Haryana','Himachal Pradesh','Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland','Odisha','Punjab','Rajasthan','Sikkim','Tamil Nadu','Tripura','Uttar Pradesh','Uttarakhand','West Bengal','Jammu and Kashmir','Ladakh','Delhi','Andaman and Nicobar'
+  'Telangana','Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chhattisgarh','Gujarat','Haryana','Himachal Pradesh','Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland','Odisha','Punjab','Rajasthan','Sikkim','Tamil Nadu','Tripura','Uttar Pradesh','Uttarakhand','West Bengal','Jammu and Kashmir','Ladakh'
   ];
 
   document.getElementById('playAgain').addEventListener('click',function(){
@@ -186,7 +186,7 @@ function finish(){
   
   if(score==0)
   d="Game is finished ! \n You haven't guessed any state correctly\n"
-  else if(score<32)
+  else if(score<29)
   d="Game is finished ! \n You have guessed " + score + " Places correctly\n";
   else
   d="Game is finished ! \n Congratulations , You have guessed all the places correctly\n";
@@ -239,7 +239,8 @@ function addDesc(){
             element.addEventListener('click',function(){
               if(lives==0) return;
                 userAns=this.getAttribute('name');
-                console.log(this.getAttribute('name'))
+                // console.log(this.getAttribute('name'))
+                if(userAns=='Delhi' || userAns=='Goa' || userAns=='Andaman and Nicobar') return;
 
                 if(q.toUpperCase()===userAns.toUpperCase()){
                     score++;
